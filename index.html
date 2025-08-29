@@ -7,22 +7,100 @@
 
     <!-- CSS External -->
     <link rel="stylesheet" href="css\style.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body>
-    
+    <!-- py dan px untuk padding sumbu y dan x -->
     <!-- Header content -->
-    <header></header>
+    <header class="header-position py-[9px] px[3px]"> 
+        <!-- Icon -->
+        <div class="logo"></div>
 
-    
+        <!-- Navbar -->
+        <nav class="flex">
+            <a href="home-page"class="border p-[7px]">Home</a>
+            <a href="our-profile"class="border p-[7px]">Our Profile</a>
+            <a href="portfolio"class="border p-[7px]">Portofolio</a>
+            <a href="message-us"class="border p-[7px]">Message Us</a>
+        </nav>
+    </header>
+
+    <hr>
+            
     <!-- Main content -->
-    <main></main>
+    <main>
+        <!-- Home -->
+        <section id="home-page" class="min-h-[550px]">
+            <header>
+                <h2 class="text-center text-[30px] font-bold py-[20px]">
+                    Welcome <span id="username"></span> to Bale's Company
+                </h2>
+            </header>
+        </section>
+        
+        <hr>
 
+        <!-- Our Profile -->
+        <section id="our-profile" class="min-h-[550px]">
+            <header>
+                <h2 class="text-center text-[30px] font-bold py-[20px]">
+                    Our Profile
+                </h2>
+            </header>
+        </section>
+
+        <hr>
+
+        <!-- Portofolio -->
+        <section id="portofolio" class="min-h-[550px]">
+            <header>
+                <h2 class="text-center text-[30px] font-bold py-[20px]">
+                    Portofolio
+                </h2>
+            </header>
+        </section>
+
+        <hr>
+
+        <!-- Message Us -->
+        <section id="message-us" class="min-h-[550px]">
+            <header>
+                <h2 class="text-center text-[30px] font-bold py-[20px]">
+                    Message Us
+                </h2>
+            </header>
+
+            <form class="px-[100px]">
+                <div class="flex flex-col max-w-[500px] mx-auto py-[20px]">
+                    <label for="name-input" class="py-[10px]">Name</label>
+                    <input type="text" id="name-input" class="border p-[7px]" placeholder="Your Name">
+
+                    <label for="email" class="py-[10px]">Email</label>
+                    <input type="email" id="email" class="border p-[7px]" placeholder="Your Email">
+
+                    <label for="message" class="py-[10px]">Message</label>
+                    <textarea id="message" rows="4" class="border p-[7px]" placeholder="Your Message"></textarea>
+
+                    <button type="button" onclick="validateForm();" class="bg-blue-500 text-white p-[10px] mt-[15px] hover:bg-blue-700">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </section>
     
+    </main>
+
+    <hr>
+
     <!-- Footer content -->
-    <footer></footer>
+    <footer class="text-center py-[20px]">
+        <p>&copy; 2025 Bale's Company. All rights reserved</p>
+    </footer>
     
-    
+   
     <!-- JS External -->
     <script src="js\script.js"></script>
 </body>
